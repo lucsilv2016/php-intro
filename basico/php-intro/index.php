@@ -1,49 +1,27 @@
-<!-- Crie um projeto em PHP para uma competição de natação,
- o sistema deverá permitir a inserção de competidores com seu nome
-  e idade, e o sistema deverá identificar em qual categoria o nadador 
-  irá competir, por exemplo, 6 a 12 anos categoria infantil, 
-   13 a 18 categoria adolescente,
-   acima de 18 categoria adulto, o sistema deverá retornar a 
-   categoria para cada nadador que for cadastrado  -->
+<!-- Crie um formulário para que o usuário possa através de uma página web 
+preencher o nome e a idade dos competidores. Esses dados deverão ser 
+utilizados para exibir em qual categoria o competidor se encaixa, 
+infantil, adolescente ou adulto -->
 
-   <?php
-   
-   $categorias = [];
-   $categorias[] = 'infantil';
-   $categorias[] = 'adolescente';
-   $categorias[] = 'adulto';
-  //  $categorias[] = 'idoso';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <title>Formulário de inscrição</title>
+  <meta name="author" context="">
+  <meta name="description" context="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-   //print_r($categorias);
-    
-  $nome = 'Luciano';
-  $idade = 19;
+<body>
 
-  // var_dump($nome);
-  // var_dump($idade);
+  <p>FORMULÁRIO PARA INSCRIÇÃO DE COMPETIDORES</p>
 
-if ($idade >= 6 && $idade <=12) {
-    for ($i=0; $i < count($categorias); $i++) {
-            if ($categorias[$i] == 'infantil')  {
-      echo "o nadador " ,$nome, " compete na categoria infantil";
-      }
-    }
-  }
-
-elseif ($idade >= 13 && $idade <=18) {
-    for ($i=0; $i < count($categorias); $i++) {
-      if ($categorias[$i] == 'adolescente')  {
-    echo "o nadador " ,$nome, " compete na categoria adolescente";
-    }
-  }
-}
-
-else {
-  for ($i=0; $i < count($categorias); $i++) {
-    if ($categorias[$i] == 'adulto')  {
-  echo "o nadador " ,$nome, " compete na categoria adulto";
-   }
-  }
-}
-
-?>
+  <form action="script.php" method="post">
+    <p> Seu nome: <input type="text" name="nome"/></p>
+    <p> Sua idade: <input type="text" name="idade"/></p>
+    <p> <input type="submit" value="Enviar dados do competidor"/></p>
+  </form>  
+</body>
+</html>
