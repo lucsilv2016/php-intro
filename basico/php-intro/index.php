@@ -2,6 +2,9 @@
 preencher o nome e a idade dos competidores. Esses dados deverão ser 
 utilizados para exibir em qual categoria o competidor se encaixa, 
 infantil, adolescente ou adulto -->
+<?php
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +12,19 @@ infantil, adolescente ou adulto -->
   <meta charset="UTF-8">
   
   <title>Formulário de inscrição</title>
+  <?php
+    $mensagemDeSucesso = obterMensagemSucesso();
+    if (!empty($mensagemDeSucesso)) 
+    {
+      echo $mensagemDeSucesso;
+    }
+    $mensagemDeErro = obterMensagemErro();
+    if (!empty($mensagemDeErro)) 
+    {
+      echo $mensagemDeErro;
+    }
+
+  ?>
   <meta name="author" context="">
   <meta name="description" context="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
